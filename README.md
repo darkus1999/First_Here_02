@@ -32,7 +32,7 @@ Si el proyecto no inicia, ejecutar en la terminal "npm start -- --reset-cache", 
 
 [@mdi/font](https://materialdesignicons.com/): Iconos de material design
 
-[babel-plugin-module-resolver]/(https://www.npmjs.com/package/babel-plugin-module-resolver):  Simplifica las rutas de requerimiento / importación de archivos
+[babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver):  Simplifica las rutas de requerimiento / importación de archivos
 
 [firebase](http://firebase.google.com/): backend as a services
 
