@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import { Avatar, Appbar, Button, TextInput } from 'react-native-paper';
 import avLoginP from '../../assets/avloginp.png';
 import BgLoginP from '../../assets/bgloginp.png';
-import GLOBAL from '../../resources/global';
+import GLOBAL from '../../lang/global';
 import { useHistory } from 'react-router-native'
 
 const Loginpeople = () => {
@@ -51,7 +51,7 @@ const Loginpeople = () => {
               secureTextEntry={true}
               left={<TextInput.Icon name={'key'}/>}
             />
-            <Button mode="contained" color={'#ff3a3a'} style={styles.btnlogin} onPress={()=>alert(data.email+'\n'+data.password)}>
+            <Button mode="contained" color={'#ff3a3a'} style={styles.btnlogin} onPress={()=>alert('hola \n'+data.email+'\n'+data.password)}>
               LOGIN
             </Button>
             <View style={styles.btnlink}>

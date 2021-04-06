@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BackHandler, StyleSheet, Text, SafeAreaView, ScrollView, ImageBackground } from 'react-native';
 import { Button, Card, TextInput } from 'react-native-paper';
-import GLOBAL from '../../resources/global';
+import GLOBAL from '../../lang/global';
 import { useHistory } from 'react-router-native';
 import imgregistro from '../../assets/registroabajo.png';
 import imgregistroportada from '../../assets/registroportada.png';
