@@ -1,6 +1,8 @@
 # FIRST HERE V02 (React Native)
 # PROYECTO DE TESIS (UNIVERSIDAD NACIONAL DE PIURA)
 
+![react-native-img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.futuremind.com%2Fblog%2Fpros-and-cons-react-native-and-native-apps&psig=AOvVaw3lUp8f29ReR6WXqORni6UH&ust=1617857973481000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDQtuys6-8CFQAAAAAdAAAAABAD)
+
 **Descripcion**:
 
 El siguiente sistema movil a sido desarrollado con fines educativos para titulación y pensado para fines comerciales en el futuro. El proyecto a sido iniciado con el Inicio rapido de [React Native Cli](https://reactnative.dev/docs/environment-setup). Para crear la estructura basica de un proyecto con ayuda del CLI de React native, se debe digitar "npx react-native init NombreProyecto".
@@ -41,6 +43,16 @@ Si el proyecto no inicia, ejecutar en la terminal "npm start -- --reset-cache", 
 [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons): Iconos vectoriales
 
 [react-router-native](https://reactrouter.com/native/guides/quick-start): Ruteo para renderizar uno u otro componente 
+
+[react-native-datepicker](https://www.npmjs.com/package/react-native-date-picker): input de tipo fecha y hora
+
+#### DEPENDENCIAS DE TESTING
+
+Estas dependencias son las usadas para realizar las pruebas unitarias de los componentes funcionales mas importantes, dichas pruebas son necesarias para evitar bugs, hay que tener en cuenta que por el echo de usar pruebas unitarias la aplicacion no pueda presentar problemas en el futuro, por eso se recomienda ir haciendo pruebas a medida que la aplicacion valla creciendo.
+
+[@testing-library/react-native](https://testing-library.com/docs/react-native-testing-library/intro/): Documentacion de la libreria usada, aqui se encuentran todas las funciones de testeo de las que se puede hacer uso.
+
+[jest](https://jestjs.io/docs/configuration): Herramienta de testeo recomendada por React Native, se instala por defecto al crear un proyecto haciendo uso del CLI de React Native
 
 ## LICENCIA
 

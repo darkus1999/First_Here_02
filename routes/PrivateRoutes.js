@@ -1,10 +1,9 @@
 import React, { Suspense } from "react";
-import { View } from 'react-native';
 import { NativeRouter, Route, Switch } from "react-router-native";
-import { Loginpeople } from '../resources/components/login/Loginpeople';
-import { RegistroUserPeople } from '../resources/components/login/RegistroUserPeople';
-import { Preloader } from '../resources/components/Loader/index';
-import GLOBAL from '../resources/lang/global';
+import { Loginpeople } from '@components/login/Loginpeople';
+import { RegistroUserPeople } from '@components/login/RegistroUserPeople';
+import { Preloader } from '@components/Loader/index';
+import GLOBAL from '@resources/lang/global';
 
 function PrivateRoutes() {
     return(

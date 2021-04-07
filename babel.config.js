@@ -6,7 +6,8 @@ module.exports = {
         "alias": {
           "@resources": "./resources",
           "@routes": "./routes",
-          "@services": "./services"
+          "@services": "./services",
+          "@components": "./resources/components"
         }
       }]
   ],

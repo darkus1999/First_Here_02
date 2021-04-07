@@ -1,13 +1,29 @@
 import * as React from 'react';
 import { BackHandler, StyleSheet, Text, SafeAreaView, ScrollView, ImageBackground } from 'react-native';
 import { Button, Card, TextInput } from 'react-native-paper';
-import GLOBAL from '../../lang/global';
+import GLOBAL from '@resources/lang/global';
 import { useHistory } from 'react-router-native';
-import imgregistro from '../../assets/registroabajo.png';
-import imgregistroportada from '../../assets/registroportada.png';
+import imgregistro from '@resources/assets/registroabajo.png';
+import imgregistroportada from '@resources/assets/registroportada.png';
 
 const RegistroUserPeople = () =>{
-    const [text, setText] = React.useState('');
+    const [data, setData] = React.useState({
+        foto: "",
+        nombres: "",
+        apellidos: "",
+        direccion: "",
+        celular: "",
+        nacimiento: "",
+        dni: "",
+        currciculum: ""
+    });
+    let handleChange = e =>{
+        const {name, value}= e;
+        setData(prevState=>({
+          ...prevState,
+          [name]: value
+        }));
+      }
     let history = useHistory();
     const irLogin = () =>{
         history.push(GLOBAL.login);
@@ -20,54 +36,54 @@ const RegistroUserPeople = () =>{
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
-                <Card.Cover style={styles.portada, {backgroundColor:'transparent'}} source={imgregistroportada}/>
-                <ImageBackground style={styles.formulario} source={imgregistro}>
-                <Button icon="plus" mode="outlined" style={styles.btn}>
-                    Agregar Foto
-                </Button>
-                <TextInput
-                label="Nombres"
-                value={text}
-                onChangeText={text => setText(text)}
-                style={styles.txt}
-                />
-                <TextInput
-                label="Apeliidos"
-                value={text}
-                onChangeText={text => setText(text)}
-                style={styles.txt}
-                />
-                <TextInput
-                label="Direccion"
-                value={text}
-                onChangeText={text => setText(text)}
-                style={styles.txt}
-                />
-                <TextInput
-                label="Celular"
-                value={text}
-                onChangeText={text => setText(text)}
-                style={styles.txt}
-                />
-                <TextInput
-                label="Nacimiento"
-                value={text}
-                onChangeText={text => setText(text)}
-                style={styles.txt}
-                />
-                <TextInput
-                label="DNI"
-                value={text}
-                onChangeText={text => setText(text)}
-                style={styles.txt}
-                />
-                <Button icon="plus" mode="outlined" style={styles.btn}>
-                    Agregar Curriculum
-                </Button>
-                <Button mode="contained" color={'#ff3a3a'} style={styles.btn}>
-                    ENVIAR
-                </Button>
-            </ImageBackground>
+                <Card.Cover style={styles.portada, {backgroundColor:'transparent'}}  source={imgregistroportada}/>
+                <ImageBackground style={styles.imgformulario} source={imgregistro}>
+                    <Button icon="plus" mode="outlined" style={styles.btn}>
+                        Agregar Foto
+                    </Button>
+                    <TextInput
+                    label="Nombres"
+                    value={data.nombres}
+                    onChangeText={(e)=>handleChange({name:'nombres',value:e})}
+                    style={styles.txt}
+                    />
+                    <TextInput
+                    label="Apeliidos"
+                    value={data.apellidos}
+                    onChangeText={(e)=>handleChange({name:'apellidos',value:e})}
+                    style={styles.txt}
+                    />
+                    <TextInput
+                    label="Direccion"
+                    value={data.direccion}
+                    onChangeText={(e)=>handleChange({name:'direccion',value:e})}
+                    style={styles.txt}
+                    />
+                    <TextInput
+                    label="Celular"
+                    value={data.celular}
+                    onChangeText={(e)=>handleChange({name:'celular',value:e})}
+                    style={styles.txt}
+                    />
+                    <TextInput
+                    label="Nacimiento"
+                    value={data.nacimiento}
+                    onChangeText={(e)=>handleChange({name:'nacimiento',value:e})}
+                    style={styles.txt}
+                    />
+                    <TextInput
+                    label="DNI"
+                    value={data.dni}
+                    onChangeText={(e)=>handleChange({name:'dni',value:e})}
+                    style={styles.txt}
+                    />
+                    <Button icon="plus" mode="outlined" style={styles.btn}>
+                        Agregar Curriculum
+                    </Button>
+                    <Button mode="contained" color={'#ff3a3a'} style={styles.btn} onPress={()=>alert(data.nombres)}>
+                        ENVIAR
+                    </Button>
+                </ImageBackground>
             </ScrollView>
         </SafeAreaView>
     );
@@ -80,9 +96,9 @@ const styles=StyleSheet.create({
     portada:{
         height: '40%',
     },
-    formulario:{
-        height: '60%',
-        alignItems: 'center'
+    imgformulario:{
+        height: '100%',
+        alignItems: 'center',
     },
     btn:{
         width: '90%',
