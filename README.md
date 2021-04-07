@@ -1,7 +1,7 @@
 # FIRST HERE V02 (React Native)
 # PROYECTO DE TESIS (UNIVERSIDAD NACIONAL DE PIURA)
 
-![react-native-img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.futuremind.com%2Fblog%2Fpros-and-cons-react-native-and-native-apps&psig=AOvVaw3lUp8f29ReR6WXqORni6UH&ust=1617857973481000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDQtuys6-8CFQAAAAAdAAAAABAD)
+![react-native-img](https://www.futuremind.com/m/cache/c8/15/c8150d863e584ed42ccfbdc3f3f1aa3a.jpg)
 
 **Descripcion**:
 
